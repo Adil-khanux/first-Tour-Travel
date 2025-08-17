@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Start about Area -->
+<section class="feature-area section-gap" id="service">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-60 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">Calculator</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Form Centered with Card Layout -->
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="p-4 shadow rounded bg-light">
+          <form method="post">
+            {% if error %}
+                <div class="alert alert-danger" role="aler">
+                   Please Enter The Value
+                 </div>
+            {% endif %}
+           
+           
+           
+           
+            {% csrf_token %}
+            
+            <div class="mb-3">
+              <label for="number1">Value 1</label>
+              <input type="text" name="number1" value="{{num1}}" class="form-control" />
+            </div>
+
+           
+            <div class="mb-3 text-center">
+              <button type="submit">Even | Odd</button>
+            </div>
+
+            <div class="mb-3">
+              <label for="result">Output</label>
+              <input type="text" class="form-control" value="{{d}}" readonly />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

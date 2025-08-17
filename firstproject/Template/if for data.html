@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title> {{title}} </title>
+    </head>
+    <body>
+        <div>
+            <h1> This is my home page  </h1>
+            <h2> {{Name}}
+        </div>
+        {% for c in clist %}
+        <div>
+           {{forloop.counter}} {{c}} 
+        </div>
+        {% endfor %}
+        <br/>
+
+        <table border="1" cellpadding="10">
+            <tr>
+                <th> Name </th>
+                <th> Phone Number </th>
+            </tr>
+
+            {% for d in Student_Details %}
+            <tr> 
+                <td> {{d.name}} </td>
+                <td> {{d.phone}} </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+         <br/>
+         <div>
+             
+            {% if numbers|length > 0 %}
+         {% for n in numbers %}
+         {% if n > 5 %}
+              {{n}}
+
+        {% endif %}
+
+       {% endfor %}
+       {% else %}
+         No Data Found
+        {% endif %}
+    
+        </div>
+        <br/>
+        <div>
+             {% if even|length > 0 %}
+
+           {% for e in even %}
+
+           {% if e > 24 %}
+
+           {{e}}
+
+           {% endif %}
+
+           {% endfor %}
+
+           {% else %}
+           No Record Found
+
+           {% endif%}
+
+        </div>
+       
+    </body>
+</html>
+
+        

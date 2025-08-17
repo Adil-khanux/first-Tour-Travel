@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Start about Area -->
+<section class="feature-area section-gap" id="service">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-60 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">Marksheet</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Form Centered with Card Layout -->
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="p-4 shadow rounded bg-light">
+          <form method="post">
+              
+              {% if error %}
+              <div class="alert alert-danger" role="alert">
+                  please Enter Value
+                </div>
+                {% endif %}
+                
+                {% csrf_token %}
+            
+  <div class="mb-3">
+    <label for="subject1" class="form-label">Subject1</label>
+    <input type="text" class="form-control"  name="sub1"/>
+  </div>
+  <div class="mb-3">
+    <label for="subject2" class="form-label">Subject2</label>
+    <input type="text" class="form-control"  name="sub2"/>
+  </div>
+<div class="mb-3">
+    <label for="subject3" class="form-label">Subject3</label>
+    <input type="text" class="form-control"  name="sub3"/>
+  </div>
+ <div class="mb-3">
+    <label for="subject4" class="form-label">Subject4</label>
+    <input type="text" class="form-control"  name="sub4"/>
+  </div>
+ <div class="mb-3">
+    <label for="subject5" class="form-label">Subject5</label>
+    <input type="text" class="form-control"  name="sub5"/>
+  </div>
+ <div class="mb-3">
+    <label for="subject6" class="form-label">Subject6</label>
+    <input type="text" class="form-control"  name="sub6"/>
+  </div>
+
+  <button type="submit">Marksheet</button> <br/>
+
+  <label> Total</label>
+  <input type="text" value="{{total}}"/> <br/>
+  <label> Division </label>
+  <input type="text" value="{{div}}"/> 
+  
+  
+         </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

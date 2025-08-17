@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - TrekVibe</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <header>
+        <img src="/static/css/img/adventure.jpg" alt="TrekVibe Logo" class="logo" />
+        <nav>
+            <ul>
+                 {% comment %} <li><a href="/">Home</a></li>
+                 <li><a href="/service">Services</a></li>
+                 <li><a href="/about-us">About-Us</a></li>
+                 <li><a href="/contact">Contact</a></li>
+                 <li><a href="/help">Help</a></li>   1st way {% endcomment %}
+
+                 {% comment %} 2nd way using url tag {% endcomment %}
+{% comment %}                  
+                 <li><a href="{% url 'home' %}">Home</a></li>
+                 <li><a href="{% url 'service' %}">Services</a></li>
+                 <li><a href="{% url 'about' %}">About-Us</a></li>
+                 <li><a href="{% url 'contact' %}">Contact</a></li>
+                 <li><a href="{% url 'help' %}">Help</a></li> {% endcomment %}
+
+                 {% comment %} high light link  {% endcomment %}
+
+                {% url 'home' as home_url %}        
+                <li class="{% if request.path == home_url %} active {% endif %}">
+                <a href="{{ home_url }}">Home</a>
+                </li>
+
+                {% url 'service' as service_url %}
+                <li class="{% if request.path == service_url %} active {% endif %}">
+                <a href="{{ service_url }}">Services</a>
+                </li>
+
+                {% url 'about' as about_url %}
+                <li class="{% if request.path == about_url %} active {% endif %}">
+                <a href="{{ about_url }}">About</a>
+                </li>
+
+                {% url 'contact' as contact_url %}
+                <li class="{% if request.path == contact_url %} active {% endif %}">
+                <a href="{{ contact_url }}">Contact</a>
+                </li>
+
+                {% url 'help' as help_url %}
+                <li class="{% if request.path == help_url %} active {% endif %}">
+                <a href="{{ help_url }}">Help</a>
+                </li>
+
+
+
+               
+            </ul>
+        </nav>
+    </header>

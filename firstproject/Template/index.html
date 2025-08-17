@@ -1,0 +1,44 @@
+
+
+
+{% extends 'base.html' %}
+
+{% comment %} # add header using include tag {% endcomment %}
+ {% comment %} {% include 'header.html' %} {% endcomment %}
+
+{% comment %} Using extend tag  {% endcomment %}
+{% comment %} y cooment niche isliye bcz extends tag first pr hona compulsary h koi comment y html code nhi hona chaiyeh   No HTML should come before {% extends %}
+
+No comment or blank lines should come before {% extends %} {% endcomment %}
+
+{% block content %}
+<marquee onmouseover="stop()" onmouseout="start()">
+  {% for news in newsData  %}
+    <a href="/newsdetails/{{news.id}}">  {{news.news_title}}   </a>  &nbsp;&nbsp; 
+  {% endfor %}
+</marquee>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Explore the World with TrekVibe</h1>
+      <p>Your adventure starts here</p>
+      <a href="services.html" class="btn">Explore Trips</a>
+    </div>
+  </section>
+  <section class="featured-trips">
+    <h2>Featured Adventures</h2>
+    <div class="trip-cards">
+      <div class="trip-card">
+        <img src="images/adventure.jpg" alt="Leh Trip">
+        <h3>Leh Ladakh Expedition</h3>
+        <p>8 Days • ₹22,500</p>
+        <a href="trip-leh.html" class="btn">View Details</a>
+      </div>
+    </div>
+  </section>
+
+ {% comment %} add footer using include tag {% endcomment %}
+  {% comment %} {% include 'footer.html' %} {% endcomment %}
+
+  {% endblock  %}
+

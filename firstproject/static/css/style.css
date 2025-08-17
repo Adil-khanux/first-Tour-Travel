@@ -1,0 +1,25 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+header { background: #0d3b2e; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+nav ul li a:hover { color: orange; }
+.logo { height: 50px; }
+.hero { background: url('images/adventure.jpg') center/cover no-repeat; height: 80vh; display: flex; justify-content: center; align-items: center; color: white; }
+.hero-overlay { background: rgba(0,0,0,0.6); padding: 40px; text-align: center; border-radius: 10px; }
+.btn { background: orange; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; }
+.trip-cards { display: flex; gap: 20px; flex-wrap: wrap; padding: 20px; }
+.trip-card { background: white; border-radius: 10px; box-shadow: 0 0 10px #ccc; padding: 15px; max-width: 300px; }
+.trip-card img { width: 100%; border-radius: 10px; }
+.page-content { padding: 40px; background: white; max-width: 800px; margin: 20px auto; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+footer { background: #0d3b2e; color: white; text-align: center; padding: 15px; }
+li.active a {
+  background-color: red;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+marquee{
+  margin-top: 25px;
+  
+}
